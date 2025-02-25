@@ -1,55 +1,80 @@
-body{
-    padding: auto;
+body {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+    background-color: white;
 }
-.container{
-    margin-top: 10%;
-    width: 300px;
-    height: 100%;
-    border-color: black;
-    border-style: solid;
+
+.container {
+    margin-top: 5vh;
+    max-width: 90%;
+    width: 350px;
+    border: 2px solid black;
     border-radius: 10px;
-    padding: 5px;
+    padding: 10px;
     background-color: black;
 }
-.display-container{
+
+.display-container {
     height: 80px;
-    
-    margin: 5px;
-    margin-bottom: 10px;
+    margin: 5px 0;
     display: flex;
     align-items: center;
-
 }
-.display-container input{
+
+.display-container input {
     height: 78px;
-    border-color: rgb(255, 255, 255);
-    border-style: solid;
+    border: 2px solid white;
     border-radius: 8px;
     width: 100%;
-    font-size: 50px;
+    font-size: 2rem;
     text-align: right;
+    padding-right: 10px;
+    margin-bottom: 10px;
 }
-button{
-    height: 55px;
+
+.button-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    margin: 5px;
+}
+
+button {
+    height: 60px;
+    min-width: 60px;
     border-radius: 40px;
     background-color: rgb(44, 44, 44);
     border: none;
     color: white;
-    font-size: 20px;
+    font-size: 1.2rem;
+    transition: transform 0.1s ease-in-out;
 }
-.sb{
+
+button:active {
+    transform: scale(0.95);
+}
+
+.sb {
     background-color: rgb(195, 55, 5);
 }
-.button-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 5px;
-    row-gap: 5px;
-    margin: 5px;
-    
 
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+    .container {
+        width: 95%;
+    }
+    
+    button {
+        height: 50px;
+        font-size: 1rem;
+    }
+
+    .display-container input {
+        font-size: 1.8rem;
+    }
 }
